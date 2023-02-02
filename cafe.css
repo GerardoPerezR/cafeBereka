@@ -3,9 +3,32 @@ body{
 }
 
 
+
+
+#about  {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+.navbar {
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-modal .modal-content {
+ color: red;
+}
+.card   {
+  border-radius: 0;
+
+}
+
 .card:hover {
-  transform: scale(1.2);
-  transition: transform 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  /* transform: scale(1.2) */
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 
@@ -13,10 +36,4 @@ body{
   .card:hover {
     transform: none;
   }
-}
-
-
-#about  {
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
