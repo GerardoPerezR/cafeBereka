@@ -1,0 +1,22 @@
+body{
+  padding-top: 50px;
+}
+
+
+.card:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s;
+}
+
+
+@media (max-width: 576px) {
+  .card:hover {
+    transform: none;
+  }
+}
+
+
+#about  {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
