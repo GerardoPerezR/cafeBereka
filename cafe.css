@@ -17,8 +17,21 @@ body{
   justify-content: space-between;
 }
 
-.my-modal .modal-content {
+.my-modal {
+  width: 100%;
+ 
+}
+
+
+
+.modal-content {
  color: red;
+
+
+}
+
+.modal-content  {
+   border-radius: 0;
 }
 .card   {
   border-radius: 0;
@@ -37,3 +50,6 @@ body{
     transform: none;
   }
 }
+
+
+
