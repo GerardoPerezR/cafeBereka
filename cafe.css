@@ -1,3 +1,16 @@
+
+
+.infoButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+
+
+
 body{
   padding-top: 50px;
 }
@@ -19,22 +32,27 @@ body{
 
 .my-modal {
   width: 100%;
+
  
 }
 
 
 
-.modal-content {
+.my-modal .modal-content {
  color: red;
+ 
 
 
 }
 
 .modal-content  {
    border-radius: 0;
+   
+
 }
 .card   {
   border-radius: 0;
+  overflow: auto;
 
 }
 
@@ -50,6 +68,5 @@ body{
     transform: none;
   }
 }
-
 
 
