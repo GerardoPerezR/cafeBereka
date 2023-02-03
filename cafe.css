@@ -1,6 +1,10 @@
 
 
-.infoButton {
+.infoButton   {
+  border-radius: 0;
+}
+
+.infoButtonContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8,7 +12,13 @@
   overflow: auto;
 }
 
-
+.buyButton  {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
 
 
 body{
