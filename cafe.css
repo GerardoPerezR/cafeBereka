@@ -23,6 +23,7 @@
 
 body{
   padding-top: 50px;
+  background-color: rgb(251, 247, 240);
 }
 
 
@@ -38,6 +39,11 @@ body{
   z-index: 0;
   display: flex;
   justify-content: space-between;
+}
+
+
+.card-img-top {
+  border-radius: 0;
 }
 
 .my-modal {
