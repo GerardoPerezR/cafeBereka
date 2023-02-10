@@ -39,8 +39,12 @@ body{
   z-index: 0;
   display: flex;
   flex-direction: row;
+<<<<<<< HEAD
   justify-content: space-between;
   align-items: center;
+=======
+  justify-content: space-between ;
+>>>>>>> 060036c57df95e1ab3163bccfbef4b08ae1aebae
 }
 
 
