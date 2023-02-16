@@ -23,10 +23,13 @@
 
 body{
   padding-top: 50px;
-  background-color: rgb(251, 247, 240);
+  background-color: rgb(197, 168, 117);
 }
 
-
+#jumbotron {
+  background-color: rgb(236, 221, 196) !important;
+  margin-top: 30px;
+}
 
 
 #about  {
@@ -81,4 +84,13 @@ body{
   }
 }
 
+footer  {
+  background-color: rgb(39, 0, 2) !important;
+  color: aliceblue;
+}
 
+
+.logo   {
+  margin-left: 12px;
+  margin-right: 12px;
+}
