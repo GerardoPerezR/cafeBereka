@@ -80,7 +80,7 @@ body{
 
 @media (max-width: 576px) {
   .card {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3)
+    box-shadow: 0 12px 15px rgba(0,0,0,0.3)
   }
   .card:hover {
     transform: none;
