@@ -50,6 +50,8 @@ body{
 }
 .card-img-top {
   border-radius: 0;
+  height: 300px;
+  object-fit: cover;
 }
 
 .my-modal {
@@ -94,6 +96,8 @@ body{
     transform: none;
   }
 }
+
+
 
 footer  {
   background-color: rgb(39, 0, 2) !important;
