@@ -50,7 +50,8 @@ body{
 }
 .card-img-top {
   border-radius: 0;
-  height: auto;
+  height: 312px;
+  width: 304px;
   
 object-fit: cover;
 }
