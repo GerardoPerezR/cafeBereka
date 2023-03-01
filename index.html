@@ -12,6 +12,7 @@
 <body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
  <script src="cafeBereka.js"></script>
+ <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <!-- Navbar -->
 
   <nav class="navbar navbar-expand-lg  bg-body-tertiary fixed-top">
@@ -73,7 +74,12 @@
     <div class="row">
 
 <!--Producto 1-->
-<script>createProduct(producto1);
+<script>
+ // console.log(document.getElementById("products"));
+ const productCardsContainer = document.getElementById('products');
+const cardHtml = createProduct(producto1);
+productCardsContainer.innerHTML += cardHtml;
+
 </script>
  <div class="col-md-3 mb-4">
         <div class="card">
