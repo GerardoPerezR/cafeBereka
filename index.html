@@ -76,69 +76,21 @@
 <!--Producto 1-->
 <script>
   console.log(document.getElementById("products"));
-//const productCardsContainer = document.getElementById('products');
-//const cardHtml = createProduct(producto1);
-//productCardsContainer.innerHTML += cardHtml;
+  
+var cardHtml1 = createProduct(producto1);
+productCardsContainer.innerHTML += cardHtml1;
 
 </script>
- <div class="col-md-3 mb-4">
-        <div class="card">
-          <img src="DSC_5232~3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-            <h5 class="card-title">Chiapas Lavado</h5>
-            <p class="card-text">
-              <strong>Origen:</strong> Chiapas<br>
-              <strong>Altitud:</strong> 1200m<br>
-              <strong>Variedad:</strong> Typica, Bourbon<br>
-              <strong>Precio:</strong> $350 x kg. + envío.
-            </p>
-<!--Button trigger modal-->
-<div class="infoButtonContainer">    <button type="button"   class="btn btn-outline-primary text-center infoButton" data-bs-toggle="modal" data-bs-target="#product1Modal">
-                Más información.
-              </button></div>
-<!--  Buy Button    -->     
-          
-<!-- Modal -->
 
-
-<div class="modal fade my-modal" id="product1Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered " >
-    <div class="modal-content">
-      
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="product1ModalLabel">Chiapas Lavado</h1>
-        
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-       
-        <img src="DSC_5232~3.jpg" alt="Product image" class="productPhoto">
-        Este café lavado es originario de Chiapas. Es un excelente café para espresso y se manifiesta mejor en un tueste medio a medio oscuro. Sabor a chocolate y notas aromáticas a frutos rojos. 
-
-      </div>
-      
-      <div class="modal-footer">
-        
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
-
-
-     
-  
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-          </div>
-        </div>
-        
- </div>
 
  <!--Producto 2-->
  <script> ;
   //const cardHtml2 = createProduct(producto2);
-  //productCardsContainer.innerHTML += cardHtml2;</script>
+  console.log(document.getElementById("products"));
+
+var cardHtml2 = createProduct(producto2);
+productCardsContainer.innerHTML += cardHtml2;
+</script>
  <div class="col-md-3 mb-4">
   <div class="card">
     <img src="DSC_5240_2.jpg" class="card-img-top" alt="...">
@@ -407,7 +359,7 @@ Est grano es de variedad Gesha, también conocido como Geisha.
         </form>-->
       </div>
 
-
+    
       
 <!-- Footer -->
       <footer class=" py-3">
