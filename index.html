@@ -75,19 +75,14 @@
 
       
 
-<!--Producto 1-->
+<!--Productos-->
 <script>
   console.log(document.getElementById("products"));
-  
-const productCardsContainer = document.getElementById("products");
-  
-
-
-
+  const productCardsContainer = document.getElementById("products");
   
   for (var i = 0; i <= productosDisponibles.length; i++ )
 
-  {
+ {
    var cardHtml1 = createProduct(productosDisponibles[i]);
 
 productCardsContainer.innerHTML += cardHtml1;
