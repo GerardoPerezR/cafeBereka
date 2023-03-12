@@ -76,8 +76,13 @@ object-fit: cover;
    
 
 }
+
+.productPhoto{
+  margin: 0;
+}
 .card   {
   border-radius: 0;
+
   overflow: auto;
 
 }
