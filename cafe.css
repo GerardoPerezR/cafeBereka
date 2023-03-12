@@ -56,9 +56,14 @@ object-fit: cover;
 }
 
 .my-modal {
+
   width: 100%;
 
  
+}
+
+.modal-body {
+  background-color: rgb(197, 168, 117);
 }
 
 
@@ -109,6 +114,13 @@ footer  {
   background-color: rgb(39, 0, 2) !important;
   color: aliceblue;
 
+}
+
+.modal-footer {
+
+  background-color: rgb(39, 0, 2) !important;
+  border-radius: 0;
+  color: aliceblue;
 }
 
 
