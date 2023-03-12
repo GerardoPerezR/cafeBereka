@@ -49,7 +49,7 @@ const createProduct = (producto) => {
         <h5 class="card-title">${producto.name}</h5>
         <p class="card-text">
           <strong>Origen:</strong> ${producto.origin}<br>
-          <strong>Altitud:</strong> ${producto.altitude}<br>
+          <strong>Altitud:</strong> ${producto.altitude} m.s.n.m.<br>
           <strong>Variedad:</strong> ${producto.variety}<br>
           <strong>Precio:</strong> $ ${producto.price} x kg. + envío
         </p>
