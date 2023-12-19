@@ -34,7 +34,7 @@ const producto4 = new Producto('4','Manos de Mujer', 'Oaxaca', 'Finca Chelín', 
 const producto5 = new Producto('5', 'Descafeinado', 'Chiapas', 'Colectivo', 'Colectivo', 1300, 'mezcla', 400, 2, 'DSC_4743.jpg',  ' Café descafeinado de Chiapas. Para quienes no quieren o no pueden consumir cafeína, o para una taza nocturna de café. Todo café descafeinado contiene cantidades pequeñas de cafeína.' );
 const producto6 = new Producto('6', 'El Kalid Natural', 'Nayarit', 'Finca El Kalid', 'Colectivo', 1200, 'mezcla', 1250, 2, 'DSC_4743.jpg',  ' ' )
 
-const productosDisponibles = [producto1, producto2, producto3, producto4, producto5, producto6];
+const productosDisponibles = [producto1, producto2,  producto4, producto5, producto6];
 
 //function which places card with product information. Use console.log for now
 
