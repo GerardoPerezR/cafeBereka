@@ -33,8 +33,9 @@ const producto3 = new Producto('3','La Herradura', 'Veracruz', 'La Herradura', '
 const producto4 = new Producto('4','Manos de Mujer', 'Oaxaca', 'Finca Chelín', 'Enrique López', 1550, 'Gesha', 650, 1, 'DSC_5343~3.jpg', 'El proyecto café manos de mujeres Oaxaqueña, es un reconocimiento a las Mujeres por su gran labor social y ambientalmente responsable, además contribuye a mitigar los efectos de sobrecalentamiento ocasionados por el cambio climático. Café de especialidad por un Oaxaca sustentable y próspero. Descripción:  Lavado de mujeres de Candelaria; Se reposa 12 horas en cereza, se despulpa a la mañana siguiente y se fermentan en bolsas de plástico por 24 horas, se lavan y se inicia su secado por unas 15 horas. Este grano es de variedad Gesha, también conocido como Geisha. Acidez balanceada, sabores a chocolate y cajeta y notas aromáticas de frutos rojos.')
 const producto5 = new Producto('5', 'Descafeinado', 'Chiapas', 'Colectivo', 'Colectivo', 1300, 'mezcla', 400, 2, 'DSC_4743.jpg',  ' Café descafeinado de Chiapas. Para quienes no quieren o no pueden consumir cafeína, o para una taza nocturna de café. Todo café descafeinado contiene cantidades pequeñas de cafeína.' );
 const producto6 = new Producto('6', 'El Kalid Natural', 'Nayarit', 'Finca El Kalid', 'Colectivo', 1200, 'mezcla', 1250, 2, 'DSC_4743.jpg',  ' ' )
+const producto7 = new Producto('7', "El Kalid Lavado", "Nayarit",  "Finca El Kalid", "Gerardo Vazquez", 1300, "Típica y Bourbon", 1200, 2, 'DSC_5295~3.jpg', "Este espectacular café es producto de un proceso de fermentación a bajas temperaturas, con un aroma a cáscara de mandarina y té de azahar y jazmín, un dulzor mieloso, y una ácidez balacneada, con un retrogusto a mandarina. Tiene un cuerpo sedoso y es excelente para cualquier método.", 'lavado' )
 
-const productosDisponibles = [producto1, producto2,  producto4, producto5, producto6];
+const productosDisponibles = [producto1, producto2,  producto4, producto5, producto6, producto7];
 
 //function which places card with product information. Use console.log for now
 
