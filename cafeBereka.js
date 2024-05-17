@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // your code here
+
 });
 
 
@@ -33,12 +33,12 @@ const chiapasMarago = new Producto('2','Chiapas Marago','Chiapas', 'colectivo','
 const herradura1 = new Producto('3','La Herradura', 'Veracruz', 'La Herradura', 'Roberto Licona', 1370, 'Guernica', 700, 2, 'DSC_5295~3.jpg', 'La finca La Herradura se ubica en la reconocida región cafetalera de Coatepec del Estado de Veracruz, identificada por sus condiciones privilegiadas de clima y geografía para un óptimo desarrollo de cafetos de la especie arábica. Este café tiene una acidez brillante y notas aromáticas a cítricos y florales.', 'lavado' );
 const manos1 = new Producto('4','Manos de Mujer', 'Oaxaca', 'Finca Chelín', 'Enrique López', 1550, 'Gesha', 650, 1, 'DSC_5343~3.jpg', 'El proyecto café manos de mujeres Oaxaqueña, es un reconocimiento a las Mujeres por su gran labor social y ambientalmente responsable, además contribuye a mitigar los efectos de sobrecalentamiento ocasionados por el cambio climático. Café de especialidad por un Oaxaca sustentable y próspero. Descripción:  Lavado de mujeres de Candelaria; Se reposa 12 horas en cereza, se despulpa a la mañana siguiente y se fermentan en bolsas de plástico por 24 horas, se lavan y se inicia su secado por unas 15 horas. Este grano es de variedad Gesha, también conocido como Geisha. Acidez balanceada, sabores a chocolate y cajeta y notas aromáticas de frutos rojos.')
 const decaf1 = new Producto('5', 'Descafeinado', 'Chiapas', 'Colectivo', 'Colectivo', 1300, 'mezcla', 400, 2, 'DSC_4743.jpg',  ' Café descafeinado de Chiapas. Para quienes no quieren o no pueden consumir cafeína, o para una taza nocturna de café. Todo café descafeinado contiene cantidades pequeñas de cafeína.' );
-const kalidNatural = new Producto('6', 'El Kalid Natural', 'Nayarit', 'Finca El Kalid', 'Gerardo Vazquez', 1200, 'mezcla', 1100, 2, 'DSC_4743.jpg',  ' ' )
-const kalidLavado = new Producto('7', "El Kalid Lavado", "Nayarit",  "Finca El Kalid", "Gerardo Vazquez", 1300, "Típica y Bourbon", 840, 2, 'DSC_5295~3.jpg', "Este espectacular café es producto de un proceso de fermentación a bajas temperaturas, con un aroma a cáscara de mandarina y té de azahar y jazmín, un dulzor mieloso, y una ácidez brillante, con un retrogusto a mandarina. Tiene un cuerpo sedoso y es excelente para cualquier método.", 'lavado' )
-
+const kalidNatural = new Producto('6', 'El Kalid Natural', 'Nayarit', 'Finca El Kalid', 'Gerardo Vazquez', 1200, 'mezcla', 1060, 2, 'DSC_4743.jpg',  ' ' )
+const kalidLavado = new Producto('7', "El Kalid Lavado", "Nayarit",  "Finca El Kalid", "Gerardo Vazquez", 1300, "Típica y Bourbon", 860, 2, 'DSC_5295~3.jpg', "Este espectacular café es producto de un proceso de fermentación a bajas temperaturas, con un aroma a cáscara de mandarina y té de azahar y jazmín, un dulzor mieloso, y una ácidez brillante, con un retrogusto a mandarina. Tiene un cuerpo sedoso y es excelente para cualquier método.", 'lavado' )
+const honeyDespulpado = new Producto('8', 'Honey Despulpado','Oaxaca', 'Finca Chelín', 'Enrique López', 1550, 'Pluma Hidalgo', 800, 3, 'DSC_5343~3.jpg', '...', 'Honey' )
 //list of available coffees
 
-const productosDisponibles = [chiapasLavado, chiapasMarago,  manos1,  decaf1, kalidNatural, kalidLavado];
+const productosDisponibles = [chiapasLavado, chiapasMarago,  honeyDespulpado,  decaf1, kalidLavado];
 
 //function which places card with product information. 
 
@@ -66,15 +66,15 @@ const createProduct = (producto) => {
           </button>
 
           <ul class="dropdown-menu" aria-labelledby="sizeDropdown-$producto-id" >
-            <li><a class="dropdown-item"  data-size="250" data-product="${producto.id}"  data-presentacion="250 gramos">250 grs</a></li>
+            <li><a class="dropdown-item"  data-size="1000" data-product="${producto.id}"  data-presentacion="1 kg.">1 kg.</a></li>
             <li><a class="dropdown-item"  data-size="500" data-product="${producto.id}"  data-presentacion="500 gramos">500 grs</a></li>
-            <li><a class="dropdown-item"  data-size="1000" data-product="${producto.id}" data-presentacion="1 kg.">1 kg.</a></li>
+            <li><a class="dropdown-item"  data-size="250" data-product="${producto.id}" data-presentacion="250 gramos">250 grs</a></li>
           
           
           
           </ul>
           </div>
-                <strong>Precio:</strong> $ <span id="productPrice${producto.id}"></span>  + envío
+                <strong>Precio:</strong> $ <span id="productPrice${producto.id}">${producto.price}</span>  + envío
         </p>
         <div class="infoButtonContainer">
           <button type="button" class="btn btn-outline-primary text-center infoButton" data-bs-toggle="modal" data-bs-target="#Modal${producto.id}">
@@ -107,8 +107,8 @@ const createProduct = (producto) => {
  
 
 
-
 }
+
 
 
 
