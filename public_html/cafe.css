@@ -28,9 +28,7 @@
 body{
   padding-top: 50px;
   color: #2d1010;
-
-  /* background-color: rgb(197, 168, 117); */
-  background-color: whitesmoke;
+  background-color: rgb(197, 168, 117);
 }
 
 #jumbotron {
