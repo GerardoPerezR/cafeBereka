@@ -1,3 +1,32 @@
+const insertShopifyScript = (productId, buyButtonCode) => {
+  const container = document.getElementById(`shopify-container-${productId}`);
+
+  if (container) {
+      // Create a temporary div to parse the script content
+      const tempDiv = document.createElement("div");
+      tempDiv.innerHTML = buyButtonCode;
+
+      // Extract script tag
+      const scriptTag = tempDiv.querySelector("script");
+
+      if (scriptTag) {
+          if (scriptTag.src) {
+              // If the script has a src attribute, load it dynamically
+              const script = document.createElement("script");
+              script.src = scriptTag.src;
+              script.async = true;
+              document.body.appendChild(script);
+          } else {
+              // If the script is inline, execute its content
+              new Function(scriptTag.textContent)();
+          }
+      }
+
+      // Insert the remaining HTML, excluding the script tag
+      container.innerHTML = tempDiv.innerHTML.replace(/<script[\s\S]*?<\/script>/gi, "");
+  }
+};
+
 document.addEventListener("DOMContentLoaded", function() {
     fetch("https://cafebereka.com/fetch-data.php", {
         method: "GET",
@@ -14,10 +43,20 @@ document.addEventListener("DOMContentLoaded", function() {
         // Call the function to create and append the product card
         const productCard = createProduct(products);
         document.getElementById('products').innerHTML += productCard;
+                    // Extract and execute Shopify Buy Button script
+            if (products.buyButtonCode) {
+              console.log("Adding Shopify Buy Button Script for product ID: " + products.id);
+                insertShopifyScript(products.id, products.buyButtonCode);
+            }
+        
       });
+
+        //call function for shopify button script
+        
       
       // Call the function to handle dropdown interactions after all products are added
       addDropdownListeners(data);
+      
     });
 });
 
@@ -37,23 +76,15 @@ const createProduct = (products) => {
 
             
             <strong>Variedad:</strong> ${products.variety}<br>
-            <div class="dropdown">
-              <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="sizeDropdown${products.id}" data-bs-toggle="dropdown" aria-haspopup="true">
-                Seleccionar presentación
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="sizeDropdown-${products.id}">
-                <li><a class="dropdown-item" data-size="1000" data-product="${products.id}" data-presentacion="1 kg.">1 kg.</a></li>
-                <li><a class="dropdown-item" data-size="500" data-product="${products.id}" data-presentacion="500 gramos">500 grs</a></li>
-                <li><a class="dropdown-item" data-size="250" data-product="${products.id}" data-presentacion="250 gramos">250 grs</a></li>
-              </ul>
-            </div>
-            <strong>Precio:</strong> $ <span id="productPrice${products.id}">${products.price}</span> + envío
-          </p>
+           <!--
           <div class="infoButtonContainer">
             <button type="button" class="btn btn-outline-primary text-center infoButton" data-bs-toggle="modal" data-bs-target="#Modal${products.id}">
               Más información.
             </button>
-          </div>
+           
+            
+            
+          </div> -->
      <div class="modal fade my-modal" id="Modal${products.id}" tabindex="-1" aria-labelledby="${products.id}ModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered " >
           <div class="modal-content">
@@ -73,12 +104,19 @@ const createProduct = (products) => {
           </div>
         </div>
             </div>
+          <div class="shopify-buy-button-container" id="shopify-container-${products.id}">
+    
+</div>
+
            
         </div>
       </div>
     </div>
   `;
+  
+  
 };
+
 
 // Function to add event listeners to dynamically created dropdown items
 const addDropdownListeners = (data) => {
@@ -109,3 +147,7 @@ const calculateNewPrice = (selectedSize, basePrice) => {
   var newPrice = ((basePrice - 20) * multiplier) + 20;
   return newPrice;
 };
+
+// Function to handle the Shopify Buy Button
+
+console.log("Shopify Buy Button Script Loaded");
