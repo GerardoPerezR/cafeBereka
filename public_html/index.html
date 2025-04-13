@@ -14,6 +14,7 @@
 
   <title>Café Bereka</title>
 </head>
+
 <body>
   
 
@@ -72,6 +73,86 @@
   </div>
   
   <!-- About Section -->
+   
+       <!-- Top Banner 
+       <div class="top-banner">
+        <div class="container">
+            <p class="text-center">¡Bienvenido a Café Béréka! Disfruta de un 10% de descuento en tu primera compra con el código: BIENVENIDO10</p>
+            <style>
+                .top-banner {
+                    background-color: #f8f9fa;
+                    padding: 10px 0;
+                    position: relative;
+                    z-index: 1;
+                }
+                .top-banner p {
+                    margin: 0;
+                    font-size: 16px;
+                    color: #333;
+                }
+                .top-banner::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 100%;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    z-index: -1;
+                }
+                .top-banner::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.1);
+                    z-index: -1;
+                }
+                .top-banner p {
+                    font-size: 18px;
+                    color: #333;
+                    font-weight: bold;
+                }
+                .top-banner p:hover {
+                    color: #007bff;
+                    text-decoration: underline;
+                }
+                .top-banner p a {
+                    color: #007bff;
+                    text-decoration: none;
+                }
+            </style>
+            <script>
+                // JavaScript to handle the banner click event
+                document.querySelector('.top-banner p').addEventListener('click', function() {
+                    window.location.href = 'https://m4ibut-dh.myshopify.com';
+
+                });
+                // Optional: Close the banner after a few seconds
+                setTimeout(function() {
+                    document.querySelector('.top-banner').style.display = 'none';
+                }, 10000); // 10 seconds  
+                // Optional: Close the banner when clicked
+                document.querySelector('.top-banner').addEventListener('click', function() {
+                    this.style.display = 'none';
+                });
+                // Rotate message
+                const messages = [
+                    "¡Bienvenido a Café Béréka! Disfruta de un 10% de descuento en tu primera compra con el código: BIENVENIDO10",
+                    "¡Descubre nuestros granos de café tostados al instante!",
+                    "¡Compra ahora y recibe tu café en la puerta de tu casa!"
+                ];
+                let currentIndex = 0;
+                const bannerText = document.querySelector('.top-banner p');
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % messages.length;
+                    bannerText.textContent = messages[currentIndex];
+                }, 5000); // Change message every 5 seconds
+            </script>
+        </div>  
+    </div> -->
 
   <div class="container" id="about">
     <h2 class="text-center">Inicio</h2>
@@ -79,6 +160,8 @@
   </div>
 
 <!--Catálogo  -->
+
+
 
 <div class="container" id="catalogo">
     <h2 class="text-center">Catálogo</h2>
@@ -183,7 +266,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
       </script>
 
-    
 
 </body>
 </html>
