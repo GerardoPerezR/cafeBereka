@@ -145,6 +145,17 @@ footer  {
   width: 320px;
 }
 
+h1 {
+  font-size: 3rem;
+  padding-bottom: 24px;
+}
+
+.display-1 {
+  font-size: 5rem;
+  font-weight: 100;
+  padding-bottom: 24px;
+}
+
 h2 {
   font-size: 2.5rem;
   padding-bottom: 24px;
@@ -152,10 +163,25 @@ h2 {
 
 .nav-link {
   color: white;
+ 
+  transition: color 0.3s ease;
+  &:hover {
+    color: grey;
+  }
+  &:focus {
+    color: rgb(217, 20, 20);
+  }
 }
 
 .navbar-brand {
   color: white;
+  ransition: color 0.3s ease;
+  &:hover {
+    color: grey;
+  }
+  &:focus {
+    color: rgb(217, 20, 20);
+  }
 }
 
 #products {
