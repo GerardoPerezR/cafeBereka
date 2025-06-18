@@ -53,6 +53,7 @@ body{
 
   padding-top: 24px;
   padding-bottom: 48px;
+  font-weight: 100;
 }
 .card-img-top {
   border-radius: 0;
@@ -172,6 +173,7 @@ h2 {
   &:focus {
     color: rgb(217, 20, 20);
   }
+  font-weight: 100;
 }
 
 .navbar-brand {
