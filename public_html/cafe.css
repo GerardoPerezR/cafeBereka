@@ -197,3 +197,14 @@ h2 {
   font-weight: 100;
 }
 
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
