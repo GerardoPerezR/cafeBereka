@@ -9,6 +9,9 @@ const insertShopifyScript = (productId, buyButtonCode) => {
       // Extract script tag
       const scriptTag = tempDiv.querySelector("script");
 
+      // Insert the remaining HTML, excluding the script tag
+      container.innerHTML = tempDiv.innerHTML.replace(/<script[\s\S]*?<\/script>/gi, "");
+
       if (scriptTag) {
           if (scriptTag.src) {
               // If the script has a src attribute, load it dynamically
@@ -17,13 +20,12 @@ const insertShopifyScript = (productId, buyButtonCode) => {
               script.async = true;
               document.body.appendChild(script);
           } else {
-              // If the script is inline, execute its content
-              new Function(scriptTag.textContent)();
+              // If the script is inline, execute its content after HTML is inserted
+              const inlineScript = document.createElement("script");
+              inlineScript.textContent = scriptTag.textContent;
+              container.appendChild(inlineScript);
           }
       }
-
-      // Insert the remaining HTML, excluding the script tag
-      container.innerHTML = tempDiv.innerHTML.replace(/<script[\s\S]*?<\/script>/gi, "");
   }
 };
 

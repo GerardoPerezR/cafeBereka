@@ -169,6 +169,7 @@ h2 {
   &:focus {
     color: rgb(217, 20, 20);
   }
+  animation: navElemnts ;
 }
 
 .navbar-brand {
@@ -208,3 +209,39 @@ h2 {
   background-color: transparent;
 }
 
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 200;
+  color: white;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    transform:scale3d(0.9, 0.9, 0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes navElemnts {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}[]
