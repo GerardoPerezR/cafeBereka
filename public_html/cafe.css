@@ -160,9 +160,9 @@ h2 {
 }
 
 .nav-link {
-  color: white;
+  color: black;
   font-weight: 200;
-  transition: color 0.3s ease;
+  transition: color 2s ease;
   &:hover {
     color: grey;
   }
@@ -170,11 +170,16 @@ h2 {
     color: rgb(217, 20, 20);
   }
   animation: navElemnts ;
+  animation-fill-mode: forwards;
+ 
 }
+
+
+
 
 .navbar-brand {
   color: white;
-  transition: color 0.3s ease;
+  transition: color 2s ease;
   &:hover {
     color: grey;
   }
@@ -239,20 +244,24 @@ h2 {
   0%{
     opacity: 0;
     transform: translateX(300px);
+    color: white;
 
   }
 
   50% {
     opacity: 0.5;
     transform: translateX(-20px);
+    color: white;
   }
   75% {
     opacity: 0.75;
     transform: translateX(10px);
+    color: white;
   }
 
   100% {
     opacity: 1;
     transform: translateX(0);
+    color: white;
   }
 }[]
