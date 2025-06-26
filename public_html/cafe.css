@@ -171,6 +171,7 @@ h2 {
   }
   animation: navElemnts ;
   animation-fill-mode: forwards;
+  animation
  
 }
 
@@ -251,11 +252,12 @@ h2 {
   50% {
     opacity: 0.5;
     transform: translateX(-20px);
+    
     color: white;
   }
   75% {
     opacity: 0.75;
-    transform: translateX(10px);
+    transform: translateX(10px) scale3d(0.9, 1.2, 1);
     color: white;
   }
 
