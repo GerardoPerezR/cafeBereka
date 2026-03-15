@@ -35,8 +35,8 @@ body{
 }
 
 #jumbotron {
-  color: white;
   background-color: rgb(11, 0, 1) !important;
+  font-family: Alibaba, sans-serif;
 
 }
 
@@ -68,6 +68,13 @@ object-fit: cover;
  
 }
 
+.logo {
+  height: 80px;
+  width: auto;
+  color: white;
+  fill: white; !important;
+  transition: fill 2s ease;
+}
 
 
 
